@@ -15,7 +15,7 @@ export default function Checkout() {
 
   return (
     <main className="page-bg min-h-screen px-4 pb-16 pt-6">
-      <PromoCountdownHeader title="Start your $0 free trial — cancel anytime" seconds={180} />
+      <PromoCountdownHeader title="Your Free Trial is Secure for:" seconds={180} />
 
       <section className="mx-auto mt-6 w-full max-w-[720px] text-center">
         <h1 className="text-3xl font-extrabold tracking-tight leading-tight">
@@ -23,7 +23,7 @@ export default function Checkout() {
         </h1>
 
         <p className="mt-2 text-sm text-white/75">
-          $0 upfront · 3-day trial · $50/mo after · cancel anytime
+          $0 upfront · 3 days · completely free · cancel anytime
         </p>
 
         <button onClick={startTrial} className="btn px-8 py-2 mt-4 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200">
@@ -62,7 +62,7 @@ export default function Checkout() {
         <div className="rounded-2xl border border-white/12 bg-black/55 p-4 text-center">
           <div className="text-lg font-semibold">Zero-risk guarantee</div>
           <p className="mt-1 text-sm text-white/80">
-            Try everything for 3 days. Not hyped? Cancel in two clicks — no fees.
+            Try everything for 3 days. Cancel in two clicks. You will not be charged today.
           </p>
         </div>
       </section>
