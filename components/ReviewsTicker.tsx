@@ -14,30 +14,30 @@ type Review = {
 
 const DATA: Review[] = [
   {
-    name: "Bobby Johnny",
+    name: "dabexx",
     stars: 5,
-    text: "Definitely recommend — you will make your money back.",
-    ago: "1h ago"
+    text: "Trust eMoney definitely worth it, i got a membership with my last money, after a few days i already covered it and made profit by just chilling at home. easiest money in my life, i feel bad i did not start this before.",
+    ago: "28 Days After Joining"
 
   },
   {
-    name: "Jaco Stampes",
-    stars: 4,
-    text: "A bit confusing at first, once you figure it out… amazing.",
-    ago: "1h ago"
+    name: "Hugo King",
+    stars: 5,
+    text: "This is honestly one of the best reselling groups. I got a 1 on 1 call with a great advisor, and everything is played out super well. I've already made $800 profit!",
+    ago: "15 Days After Joining"
   },
   {
     name: "Mira D.",
     stars: 5,
     text: "$0.01 Dysons. Paid for itself day one.",
-    ago: "2h ago"
+    ago: "2 Hours After Joining"
 
   },
   {
-    name: "Alejandro V.",
+    name: "Sienna Galera",
     stars: 5,
-    text: "$1,246 → $2,225 in 24h. No joke.",
-    ago: "today"
+    text: "Love this community and group so much. I’ve been reselling for 5 years and this is the best tool to have to keep you in the loop! Seriously with everything! Sneakers, toys, items that are trending and in season, penny deals & live seasons to for us to learn and get better at what we do! If you are a beginner or pro at this we are all one in this group. I also love the staff! Cece is AMAZING! I can go on about this app. Don’t miss out on such a great opportunity to be apart of an amazing community! And the most important part is actually making money! And I copped a toy on the first day I joined this group and sold it on eBay 3 days later!! Woot woot! $$$$$",
+    ago: "14 Days After Joining"
   },
 ];
 
