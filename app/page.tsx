@@ -27,7 +27,7 @@ export default function Checkout() {
         </p>
 
         <button onClick={startTrial} className="btn px-8 py-2 mt-4 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200">
-          Start free trial
+          Unlock My Free Trial
         </button>
       </section>
 
