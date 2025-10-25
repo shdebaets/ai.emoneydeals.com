@@ -1,26 +1,82 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* brand colors */
+  --color-brand-purple: #8b5cf6;
+  --color-brand-magenta: #ec4899;
+
+  --color-brand-bg: #0a0712;
+  --color-brand-purple: #7a3cff;
+  --color-brand-magenta: #ff2db5;
+  --color-brand-glow: #9d6bff;
+  --shadow-glow: 0 0 20px rgba(122, 60, 255, .45), 0 0 40px rgba(255, 45, 181, .25);
+  --blur-xs: 2px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden
+}
+
+.page-bg {
+  position: relative;
+  min-height: 100dvh;
+  background: #0b0b0f;
+}
+
+.page-bg::before,
+.page-bg::after {
+  content: "";
+  position: fixed;
+  inset: auto;
+  width: 1400px;
+  height: 1400px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(closest-side, rgba(190, 0, 255, .16), transparent 65%);
+  top: -520px;
+}
+
+.page-bg::after {
+  width: 1200px;
+  height: 1200px;
+  top: 40%;
+  background: radial-gradient(closest-side, rgba(255, 0, 140, .10), transparent 65%);
+}
+
+.card {
+  background: color-mix(in oklab, #000 84%, transparent 0%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, .08)
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  /* padding: .8rem 1rem; */
+  background: linear-gradient(90deg, #8a2be2, #ff2d95);
+  font-weight: 700
+}
+
+.btn:active {
+  transform: translateY(1px)
 }
