@@ -19,7 +19,7 @@ export default function Checkout() {
 
       <section className="mx-auto mt-6 w-full max-w-[720px] text-center">
         <h1 className="text-3xl font-extrabold tracking-tight leading-tight">
-          Get <span className="text-fuchsia-300">INSTANT</span> Access to Hidden Clearance Deals near you.
+          Get <span className="text-fuchsia-300">INSTANT</span> Access to Hidden Clearance Deals Near You... Before They’re Gone
         </h1>
 
         <p className="mt-2 text-sm text-white/75">
