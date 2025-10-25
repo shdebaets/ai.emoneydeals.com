@@ -19,11 +19,11 @@ export default function Checkout() {
 
       <section className="mx-auto mt-6 w-full max-w-[720px] text-center">
         <h1 className="text-3xl font-extrabold tracking-tight leading-tight">
-          Unlock penny-deal locations for your ZIP — <span className="text-fuchsia-300">now</span>.
+          Get <span className="text-fuchsia-300">INSTANT</span> Access to Hidden Clearance Deals near you.
         </h1>
 
         <p className="mt-2 text-sm text-white/75">
-          $0 upfront · 3 days · completely free · cancel anytime
+          $0 Upfront - Cancel Anytime - Join 10,000+ Clearance Hunters
         </p>
 
         <button onClick={startTrial} className="btn px-8 py-2 mt-4 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200">
