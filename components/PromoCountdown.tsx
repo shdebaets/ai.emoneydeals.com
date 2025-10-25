@@ -52,7 +52,7 @@ export default function PromoCountdownHeader({ title, seconds = 180 }: Props) {
                 </div>
             </div> */}
 
-            <motion.div
+            {/* <motion.div
                 initial={false}
                 animate={compact ? "hide" : "show"}
                 variants={{ show: { y: 0, opacity: 1 }, hide: { y: -12, opacity: 0 } }}
@@ -75,11 +75,12 @@ export default function PromoCountdownHeader({ title, seconds = 180 }: Props) {
                         <div className="font-mono text-base font-bold tabular-nums">{mm}:{ss}</div>
                     </div>
                 </div>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
                 initial={false}
-                animate={compact ? "show" : "hide"}
+                // animate={compact ? "show" : "hide"}
+                animate="show"
                 variants={{ show: { y: 0, opacity: 1 }, hide: { y: -12, opacity: 0 } }}
                 transition={{ duration: 0.18, ease: "easeOut" }}
                 className="pointer-events-none fixed inset-x-0 top-0 z-[70] px-3"
