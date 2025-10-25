@@ -23,7 +23,7 @@ export default function Checkout() {
         </h1>
 
         <p className="mt-2 text-sm text-white/75">
-          $0 Upfront - Cancel Anytime - Join 10,000+ Clearance Hunters
+          $0 Upfront - Cancel Anytime - Join 5,000+ Clearance Hunters
         </p>
 
         <button onClick={startTrial} className="btn px-8 py-2 mt-4 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200">
