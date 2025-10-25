@@ -33,7 +33,7 @@ export default function PromoCountdownHeader({ title, seconds = 180 }: Props) {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    return (
+    return ( 
         <>
             {/* <div className="mx-auto w-full max-w-[720px] px-3">
                 <div className="relative overflow-hidden rounded-2xl border border-white/12 bg-black/60 p-4 text-center shadow-[0_0_40px_rgba(160,0,255,.22)] backdrop-blur-md">
