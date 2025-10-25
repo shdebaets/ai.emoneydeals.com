@@ -33,10 +33,12 @@ export default function Checkout() {
 
       <SuccessHeroSlider
         items={[
-          { src: "/success/906214d1-f74a-427a-9745-0d76e76ce16b.png", caption: "BOXES TO BANK IN 24H" },
-          { src: "/success/78bd80e2-2c2b-4a68-ac30-89ce9dbed60d.png", caption: "PRO TOOLS AT PENNY PRICES" },
-          { src: "/success/949ca9d4-5f82-4a40-9c87-2a61e22d27c0.jpg", caption: "SEALED POKÉMON MOVING CHEAP" },
-          { src: "/success/659a7d01-ff20-4a5a-9710-358b841ac6df.png", caption: "FIRE TV BULK AT PENNY-LEVEL" },
+          { src: "/success/vanitysold.png", caption: "REDWAKE - $0.01 Items Sold For $250" },
+          { src: "/success/tools.png", caption: "VLAD - 80% OFF TOOLKITS ($600 profit)" },
+          { src: "/success/pokemonprofit.png", caption: "RYAN - POKEMON $180 PROFIT" },
+          { src: "/success/chairs.png.jpg", caption: "JEFFREY - $250 FROM CHAIRS" },
+          { src: "/success/garagedoor.png", caption: "DEBRA - GARAGE DOOR OPENER FOR $0.01" },
+          { src: "/success/pennyitem.png", caption: "ILIA - $600 DOWN TO $0.06" },
         ]}
       />
 
