@@ -14,7 +14,7 @@ export default function Checkout() {
   }
 
   return (
-    <main className="page-bg min-h-screen px-4 pb-16 pt-6">
+    <main className="page-bg min-h-screen px-4 pb-16 pt-20">
       <PromoCountdownHeader title="Your Free Trial is Secure for:" seconds={180} />
 
       <section className="mx-auto mt-6 w-full max-w-[720px] text-center">
