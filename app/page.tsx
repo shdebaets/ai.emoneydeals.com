@@ -33,7 +33,7 @@ export default function Checkout() {
 
       <SuccessHeroSlider
         items={[
-          { src: "/success/vanity.jpg", caption: "REDWAKE - $0.01 Vanity Sold For $250" },
+          { src: "/success/vanity.jpg", caption: "REDWAKE - $0.01 VANITY SOLD FOR $250" },
           { src: "/success/pokemon.jpg", caption: "RYAN - POKEMON $180 PROFIT" },
           { src: "/success/chairs.png.jpg", caption: "JEFFREY - $250 FROM CHAIRS" },
           { src: "/success/garage.jpg", caption: "DEBRA - GARAGE DOOR OPENER FOR $0.01" },
