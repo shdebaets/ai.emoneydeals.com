@@ -27,15 +27,15 @@ export default function Checkout() {
         </p>
 
         <button onClick={startTrial} className="btn px-8 py-2 mt-4 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200">
-          Unlock My Free Trial
+          Unlock My Free Trial 🔓
         </button>
       </section>
 
       <SuccessHeroSlider
         items={[
           { src: "/success/vanity.jpg", caption: "REDWAKE - $0.01 VANITY SOLD FOR $250" },
-          { src: "/success/pokemon.jpg", caption: "RYAN - POKEMON $180 PROFIT" },
-          { src: "/success/chairs.png.jpg", caption: "JEFFREY - $250 FROM CHAIRS" },
+          { src: "/success/pokemon.jpg", caption: "RYAN - POKEMON $180 PROFIT SECURED" },
+          { src: "/success/chairs.png.jpg", caption: "JEFFREY - $250 PROFIT FROM CHAIRS" },
           { src: "/success/garage.jpg", caption: "DEBRA - GARAGE DOOR OPENER FOR $0.01" },
           { src: "/success/pennyitem.png", caption: "ILIA - $600 DOWN TO $0.06" },
         ]}
@@ -45,7 +45,7 @@ export default function Checkout() {
 
       <section className="mx-auto mt-6 w-full max-w-[720px]" id="checkout">
         <div className="card p-4">
-          <div className="text-center text-lg font-semibold">Free Access</div>
+          <div className="text-center text-lg font-semibold">Free Trial</div>
           <div className="mt-3 rounded-xl border border-white/10 bg-black/50 p-3">
             <WhopCheckoutEmbed
               ref={ref}
