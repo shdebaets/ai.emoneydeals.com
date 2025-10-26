@@ -21,7 +21,7 @@ export default function Checkout() {
         <h1 className="text-3xl font-extrabold tracking-tight leading-tight text-center">
           Get Our <span className="text-fuchsia-300">Secret Clearance</span>
           <br />
-          <span className="text-fuchsia-300">AI Software</span>
+          AI Software
           <br />
           <span className="text-fuchsia-300">5,000+</span> Resellers Use
         </h1>
