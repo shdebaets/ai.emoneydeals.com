@@ -14,7 +14,7 @@ type Item = {
 };
 
 export default function SuccessHeroSlider({
-    items, height = 540, autoplayMs = 3000, className = ""
+    items, height = 540, autoplayMs = 5000, className = ""
 }: {
     items: Item[];
     height?: number;
