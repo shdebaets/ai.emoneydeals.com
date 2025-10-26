@@ -54,7 +54,7 @@ export default function ReviewsTicker() {
         <div className="mb-2 text-center text-lg font-semibold">Reviews</div>
         <Swiper
           modules={[Autoplay]}
-          autoplay={{ delay: 2200, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           slidesPerView={1}
           loop
           className="!w-full"
