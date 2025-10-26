@@ -19,7 +19,7 @@ export default function Checkout() {
 
       <section className="mx-auto mt-6 w-full max-w-[720px] text-center">
         <h1 className="text-3xl font-extrabold tracking-tight leading-tight">
-          Get the <span className="text-fuchsia-300">Clearance AI Software</span> Our Members Use to Find <span className="text-fuchsia-300">Hidden Deals</span> 
+          Get Our <span className="text-fuchsia-300">Clearance AI Software</span> <span className="text-fuchsia-300"> 5,000+ Resellers</span> Use 
         </h1>
 
         <p className="mt-2 text-sm text-white/75">
