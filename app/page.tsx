@@ -19,9 +19,9 @@ export default function Checkout() {
 
       <section className="mx-auto mt-6 w-full max-w-[720px] text-center">
         <h1 className="text-3xl font-extrabold tracking-tight leading-tight text-center">
-          <span>Get Our Secret Clearance</span>
+          Get Our <span className="block text-fuchsia-300">Secret Clearance</span>
           <span className="block text-fuchsia-300">AI Software</span>
-          <span className="block text-fuchsia-300">5,000+ Resellers Use</span>
+          <span className="block text-fuchsia-300">5,000+</span> Resellers Use
         </h1>
         <p className="mt-2 text-sm text-white/75">
           $0 Upfront - Cancel Anytime - Join 5,000+ Active Users
