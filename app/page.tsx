@@ -23,7 +23,7 @@ export default function Checkout() {
           <br />
           AI Software
           <br />
-          <span className="text-fuchsia-300">5,000+</span> Resellers Use
+          <span className="text-fuchsia-300">5,000+ Resellers</span> Use
         </h1>
         <p className="mt-2 text-sm text-white/75">
           $0 Upfront - Cancel Anytime - Join 5,000+ Active Users
