@@ -18,10 +18,11 @@ export default function Checkout() {
       <PromoCountdownHeader title="Your Spot is Reserved for the Next:" seconds={180} />
 
       <section className="mx-auto mt-6 w-full max-w-[720px] text-center">
-        <h1 className="text-3xl font-extrabold tracking-tight leading-tight">
-          Get Our <span className="text-fuchsia-300">Secret Clearance<br /> AI Software</span><br /> <span className="text-fuchsia-300"> 5,000+ Resellers</span> Use 
+        <h1 className="text-3xl font-extrabold tracking-tight leading-tight text-center">
+          <span>Get Our</span>
+          <span className="block text-fuchsia-300">Secret Clearance AI Software</span>
+          <span className="block text-fuchsia-300">5,000+ Resellers Use</span>
         </h1>
-
         <p className="mt-2 text-sm text-white/75">
           $0 Upfront - Cancel Anytime - Join 5,000+ Active Users
         </p>
