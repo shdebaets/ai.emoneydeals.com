@@ -27,10 +27,10 @@ const DATA: Review[] = [
 
   },
   {
-    name: "Sienna Galera",
+    name: "ShinBoi",
     stars: 5,
-    text: "Love this community and group so much. I’ve been reselling for 5 years and this is the best tool to have to keep you in the loop! Seriously with everything! Sneakers, toys, items that are trending and in season, penny deals & live seasons to for us to learn and get better at what we do! If you are a beginner or pro at this we are all one in this group. I also love the staff! Cece is AMAZING! I can go on about this app. Don’t miss out on such a great opportunity to be apart of an amazing community! And the most important part is actually making money! And I copped a toy on the first day I joined this group and sold it on eBay 3 days later!! Woot woot! $$$$$",
-    ago: "14 Days After Joining"
+    text: "Look it’s the truth I’ve joined eMoney 2 days ago and I’ve already found a lead on a discount item at Home Depot. So I’m looking forward with more in the future but enough said the support team fire they were super helpful",
+    ago: "2 Days After Joining"
   },
   {
     name: "dabexx",
