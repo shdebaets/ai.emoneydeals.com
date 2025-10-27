@@ -40,7 +40,7 @@ export default function Checkout() {
           { src: "/success/pokemon.jpg", caption: "RYAN - POKEMON $180 PROFIT SECURED" },
           { src: "/success/chairs.png.jpg", caption: "JEFFREY - $250 PROFIT FROM CHAIRS" },
           { src: "/success/garage.jpg", caption: "DEBRA - GARAGE DOOR OPENER FOR $0.01" },
-          { src: "/success/pennyitem.png", caption: "ILIA - $600 DOWN TO $0.06" },
+          { src: "/success/pennyitem.jpg", caption: "ILIA - $600 DOWN TO $0.06" },
         ]}
       />
 
