@@ -53,7 +53,7 @@ export default function Checkout() {
             <WhopCheckoutEmbed
               ref={ref}
               planId="plan_QOk7Ldw02rMJH"
-              theme="dark"
+              theme="dark" 
               fallback={<>loading…</>}
               
             />
