@@ -55,7 +55,7 @@ export default function Checkout() {
               planId="plan_QOk7Ldw02rMJH"
               theme="dark"
               fallback={<>loading…</>}
-              skipRedirect
+              
             />
           </div>
           <p className="mt-3 text-center text-xs text-white/60">Secured by Whop • Encrypted checkout</p>
