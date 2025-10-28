@@ -66,7 +66,7 @@ export default function Checkout() {
         <div className="rounded-2xl border border-white/12 bg-black/55 p-4 text-center">
           <div className="text-lg font-semibold">Risk Free Guarantee</div>
           <p className="mt-1 text-sm text-white/80">
-            Try everything for 3 days. Cancel in two clicks. No hidden charges.
+            Try everything for 3 days. Cancel in two clicks. $50/m after trial.
           </p>
         </div>
       </section>
