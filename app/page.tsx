@@ -52,7 +52,7 @@ export default function Checkout() {
           <div className="mt-3 rounded-xl border border-white/10 bg-black/50 p-3">
             <WhopCheckoutEmbed
               ref={ref}
-              planId="plan_QOk7Ldw02rMJH"
+              planId="plan_l9bXnelM3OrJN"
               theme="dark" 
               fallback={<>loading…</>}
               
