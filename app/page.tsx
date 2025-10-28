@@ -55,7 +55,7 @@ export default function Checkout() {
               planId="plan_TtJbJOdV7U3UE"
               theme="dark" 
               fallback={<>loading…</>}
-              
+              hidePrice={true}  // 👈 hides the price
             />
           </div>
           <p className="mt-3 text-center text-xs text-white/60">Secured by Whop • Encrypted checkout</p>
