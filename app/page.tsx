@@ -48,7 +48,7 @@ export default function Checkout() {
 
       <section className="mx-auto mt-6 w-full max-w-[720px]" id="checkout">
         <div className="card p-4">
-          <div className="text-center text-lg font-semibold">Free Trial</div>
+          <div className="text-center text-lg font-semibold">Risk Free ✅  - Cancel Anytime ✅</div>
           <div className="mt-3 rounded-xl border border-white/10 bg-black/50 p-3">
             <WhopCheckoutEmbed
               ref={ref}
