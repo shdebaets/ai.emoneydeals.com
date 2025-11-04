@@ -24,6 +24,11 @@ async function trackEvent(event: string) {
 export default function Checkout() {
   const ref = useCheckoutEmbedControls();
 
+  // ✅ Fire "view" when page loads
+  useEffect(() => {
+    trackEvent("view");
+  }, []);
+
   // Track scroll events
   useEffect(() => {
     let scrollTimeout: NodeJS.Timeout;
@@ -61,7 +66,10 @@ export default function Checkout() {
         <p className="mt-2 text-sm text-white/75">
           $0 Upfront - Cancel Anytime - Join 5,000+ Active Users
         </p>
-        <button onClick={startTrial} className="btn px-8 py-2 mt-4 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200">
+        <button
+          onClick={startTrial}
+          className="btn px-8 py-2 mt-4 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200"
+        >
           Unlock My Free Trial 🔓
         </button>
       </section>
