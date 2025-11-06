@@ -29,7 +29,7 @@ const DATA: Review[] = [
   {
     name: "ShinBoi",
     stars: 5,
-    text: "Look it’s the truth I’ve joined eMoney 2 days ago and I’ve already found a lead on a discount item at Home Depot. So I’m looking forward with more in the future but enough said the support team fire they were super helpful",
+    text: "Look it’s the truth I’ve joined eMoney 2 days ago and I’ve already found a lead on a discount item at Walmart. So I’m looking forward with more in the future but enough said the support team fire they were super helpful",
     ago: "2 Days After Joining"
   },
   {
