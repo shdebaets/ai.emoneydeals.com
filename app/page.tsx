@@ -107,7 +107,7 @@ export default function Checkout() {
         </div>
       </section>
       <footer className="mx-auto mt-10 w-full max-w-[720px] text-center text-xs text-white/50">
-        © {new Date().getFullYear()} eMoney Reselling • Terms • Privacy
+        © {new Date().getFullYear()} eMoney Reselling • <a href="https://myworkspacebc004.myclickfunnels.com/tos">Terms</a> • <a href="https://myworkspacebc004.myclickfunnels.com/privacy-policy">Privacy</a>
       </footer>
     </main>
   );
