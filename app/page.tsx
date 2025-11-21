@@ -1,9 +1,11 @@
 "use client";
+import { useEffect } from "react";
+import PromoCountdownHeader from "@/components/PromoCountdown";
+import SuccessHeroSlider from "@/components/SuccessHeroSlider";
+import ReviewsTicker from "@/components/ReviewsTicker";
+import { WhopCheckoutEmbed, useCheckoutEmbedControls } from "@whop/checkout/react";
+import { gaEvent } from "./(lib)/ga";
 
-import Image from "next/image";
-import { useMemo, useEffect } from "react";
-
-// ✅ Tracking helper
 async function trackEvent(event: string) {
   try {
     await fetch("https://emoneydeals.com/api/web-event", {
@@ -19,152 +21,94 @@ async function trackEvent(event: string) {
   }
 }
 
-export default function TelegramJoinPage() {
-  const year = useMemo(() => new Date().getFullYear(), []);
+export default function Checkout() {
+  const ref = useCheckoutEmbedControls();
 
-  // ✅ Fire view on page load
+  // ✅ Fire "view" when page loads
   useEffect(() => {
-    trackEvent("telegram_join_view");
+    trackEvent("view");
   }, []);
 
-  const handleJoinTelegram = () => {
-    trackEvent("telegram_open_channel_click");
+  // Track scroll events
+  useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
+    const handleScroll = () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        trackEvent("scroll");
+      }, 500); // Debounce to avoid too many events
+    };
 
-    const tgDeepLink = "tg://resolve?domain=emoneyreselling";
-    const webLink = "https://t.me/emoneyreselling";
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);
 
-    const start = Date.now();
-    window.location.href = tgDeepLink;
-
-    setTimeout(() => {
-      if (Date.now() - start < 1200) {
-        window.location.href = webLink;
-      }
-    }, 600);
-  };
+  function startTrial() {
+    trackEvent("unlock_my_free_trial");
+    gaEvent("start_trial");
+    window.scrollTo({ top: document.getElementById("checkout")?.offsetTop, behavior: "smooth" });
+  }
 
   return (
-    <main className="min-h-screen w-full bg-gradient-to-br from-[#667eea] to-[#764ba2] text-slate-900 flex items-center justify-center px-4">
-      <div className="w-full max-w-md">
-        {/* Card */}
-        <div className="rounded-3xl bg-white/95 backdrop-blur border border-white/60 shadow-xl px-6 py-7 md:px-8 md:py-8">
-          {/* Logo */}
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Image
-              src="/success/favicon.ico"
-              alt="eMoney Logo"
-              width={32}
-              height={32}
-              className="rounded-full"
-            />
-            <span className="text-base font-semibold tracking-tight">eMoney</span>
-          </div>
-
-          {/* Title */}
-          <h1 className="text-center text-xl font-extrabold tracking-tight text-slate-800">
-            FOLLOW THE STEPS TO GET ACCESS
-          </h1>
-          <p className="mt-2 text-center text-xs text-slate-600">
-            Join our FREE Telegram alerts channel for hidden clearance & flips.
-          </p>
-
-          {/* Steps */}
-          <ul className="mt-5 space-y-3">
-            {/* Step 1 */}
-            <li className="flex items-start rounded-2xl bg-slate-50 border border-slate-200 px-3.5 py-3">
-              <div className="mr-3 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-indigo-500 text-xs font-bold text-white">
-                1
-              </div>
-              <div className="text-xs">
-                <div className="font-semibold text-slate-800">
-                  Download Telegram
-                </div>
-                <p className="mt-1 text-slate-600">
-                  If you don&apos;t have the app yet, install it below:
-                </p>
-                <div className="mt-2 flex flex-col gap-2">
-                  <a
-                    href="https://apps.apple.com/app/telegram-messenger/id686449807"
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={() => trackEvent("telegram_download_ios_click")}
-                    className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-center text-xs font-semibold text-slate-800 hover:bg-slate-50 transition"
-                  >
-                    Download for iPhone
-                  </a>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=org.telegram.messenger"
-                    target="_blank"
-                    rel="noreferrer"
-                    onClick={() => trackEvent("telegram_download_android_click")}
-                    className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-center text-xs font-semibold text-slate-800 hover:bg-slate-50 transition"
-                  >
-                    Download for Android
-                  </a>
-                </div>
-              </div>
-            </li>
-
-            {/* Step 2 */}
-            <li className="flex items-start rounded-2xl bg-slate-50 border border-slate-200 px-3.5 py-3">
-              <div className="mr-3 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-indigo-500 text-xs font-bold text-white">
-                2
-              </div>
-              <div className="text-xs w-full">
-                <div className="font-semibold text-slate-800">
-                  Already have Telegram?
-                </div>
-                <p className="mt-1 text-slate-600">
-                  Tap the button to open the eMoney channel.
-                </p>
-                <button
-                  onClick={handleJoinTelegram}
-                  className="mt-2 w-full rounded-xl bg-blue-600 px-3 py-2 text-xs font-semibold text-white hover:bg-blue-700 transition"
-                >
-                  Open eMoney Telegram Channel
-                </button>
-                <p className="mt-2 text-[10px] text-slate-500">
-                  If you see &quot;address is invalid&quot;, finish installing
-                  Telegram, then come back and tap again.
-                </p>
-              </div>
-            </li>
-
-            {/* Step 3 */}
-            <li className="flex items-start rounded-2xl bg-amber-50 border border-amber-200 px-3.5 py-3">
-              <div className="mr-3 flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-amber-400 text-xs font-bold text-slate-900">
-                3
-              </div>
-              <div className="text-xs">
-                <div className="font-semibold text-slate-800">
-                  If the button doesn&apos;t work
-                </div>
-                <p className="mt-1 text-slate-600">
-                  Open Telegram and search for this username:
-                </p>
-                <span
-                  className="mt-2 inline-flex items-center rounded-full bg-slate-100 px-2.5 py-1 font-mono text-[11px] text-slate-800"
-                  onClick={() => trackEvent("telegram_username_pill_click")}
-                >
-                  @emoneyreselling
-                </span>
-              </div>
-            </li>
-          </ul>
-
-          {/* Proof */}
-          <div className="mt-4 border-t border-slate-200 pt-3 text-[11px] text-slate-600 space-y-1">
-            <div>• 1,800+ 5-star reviews from resellers</div>
-            <div>• $10,000,000+ profit found by members</div>
-            <div>• 100% free to join, no credit card required</div>
-          </div>
-        </div>
-
-        <p className="mt-4 text-center text-[10px] text-white/80">
-          © {year} eMoney Reselling · Not affiliated with Telegram, Walmart, or
-          Home Depot.
+    <main className="page-bg min-h-screen px-4 pb-16 pt-15">
+      <PromoCountdownHeader title="Your Spot is Reserved for the Next:" seconds={180} />
+      <section className="mx-auto mt-6 w-full max-w-[720px] text-center">
+        <h1 className="text-3xl font-extrabold tracking-tight leading-tight text-center">
+          Get Our <span className="text-fuchsia-300">Secret Clearance</span>
+          <br />
+          AI Software
+          <br />
+          <span className="text-fuchsia-300">5,000+ Resellers</span> Use
+        </h1>
+        <p className="mt-2 text-sm text-white/75">
+          $0 Upfront - Cancel Anytime - Join 5,000+ Active Users
         </p>
-      </div>
+        <button
+          onClick={startTrial}
+          className="btn px-8 py-2 mt-4 cursor-pointer hover:border-brand-magenta/60 hover:shadow-glow hover:opacity-80 active:scale-95 transition-all duration-200"
+        >
+          Unlock My Free Trial 🔓
+        </button>
+      </section>
+      <SuccessHeroSlider
+        items={[
+          { src: "/success/vanity.jpg", caption: "REDWAKE - $0.01 VANITY SOLD FOR $250" },
+          { src: "/success/pokemon.jpg", caption: "RYAN - POKEMON $180 PROFIT SECURED" },
+          { src: "/success/chairs.png.jpg", caption: "JEFFREY - $250 PROFIT FROM CHAIRS" },
+          { src: "/success/garage.jpg", caption: "DEBRA - GARAGE DOOR OPENER FOR $0.01" },
+          { src: "/success/pennyitem.jpg", caption: "ILIA - $600 DOWN TO $0.06" },
+        ]}
+      />
+      <ReviewsTicker />
+      <section className="mx-auto mt-6 w-full max-w-[720px]" id="checkout">
+        <div className="card p-4">
+          <div className="text-center text-lg font-semibold">Free Trial</div>
+          <div className="mt-3 rounded-xl border border-white/10 bg-black/50 p-3">
+            <WhopCheckoutEmbed
+              ref={ref}
+              planId="plan_Y2EfQX09xcQKc"
+              theme="dark"
+              fallback={<>loading…</>}
+              hidePrice={true}  // 👈 hides the price
+            />
+          </div>
+          <p className="mt-3 text-center text-xs text-white/60">Secured by Whop • Encrypted checkout</p>
+        </div>
+      </section>
+      <section className="mx-auto mt-6 w-full max-w-[720px]">
+        <div className="rounded-2xl border border-white/12 bg-black/55 p-4 text-center">
+          <div className="text-lg font-semibold">Risk Free Guarantee</div>
+          <p className="mt-1 text-sm text-white/80">
+            Try everything for 3 days. Cancel in two clicks. $50/m after trial.
+          </p>
+        </div>
+      </section>
+      <footer className="mx-auto mt-10 w-full max-w-[720px] text-center text-xs text-white/50">
+        © {new Date().getFullYear()} eMoney Reselling • <a href="https://myworkspacebc004.myclickfunnels.com/tos">Terms</a> • <a href="https://myworkspacebc004.myclickfunnels.com/privacy-policy">Privacy</a>
+      </footer>
     </main>
   );
 }
