@@ -85,11 +85,11 @@ export default function Checkout() {
       <ReviewsTicker />
       <section className="mx-auto mt-6 w-full max-w-[720px]" id="checkout">
         <div className="card p-4">
-          <div className="text-center text-lg font-semibold">Free Trial</div>
+          <div className="text-center text-lg font-semibold">7-Day Free Trial</div>
           <div className="mt-3 rounded-xl border border-white/10 bg-black/50 p-3">
             <WhopCheckoutEmbed
               ref={ref}
-              planId="plan_Y2EfQX09xcQKc"
+              planId="plan_PMBAYoiP52u7r"
               theme="dark"
               fallback={<>loading…</>}
               hidePrice={true}  // 👈 hides the price
@@ -102,7 +102,7 @@ export default function Checkout() {
         <div className="rounded-2xl border border-white/12 bg-black/55 p-4 text-center">
           <div className="text-lg font-semibold">Risk Free Guarantee</div>
           <p className="mt-1 text-sm text-white/80">
-            Try everything for 3 days. Cancel in two clicks. $50/m after trial.
+            Try everything for 7 days. Cancel in two clicks. $50/m after trial.
           </p>
         </div>
       </section>
