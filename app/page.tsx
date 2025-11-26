@@ -89,7 +89,7 @@ export default function Checkout() {
           <div className="mt-3 rounded-xl border border-white/10 bg-black/50 p-3">
             <WhopCheckoutEmbed
               ref={ref}
-              planId="plan_6KwUKw1ckTGZQ"
+              planId="plan_Ruq2C4mj6PZXf"
               theme="dark"
               fallback={<>loading…</>}
               hidePrice={true}  // 👈 hides the price
